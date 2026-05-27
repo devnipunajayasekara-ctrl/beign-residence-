@@ -1,774 +1,1211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>BEING RESIDENCES | Boutique Coastal Living in Ahangama, Sri Lanka</title>
-  <meta name="description" content="BEING RESIDENCES is a boutique condominium development in Ahangama, Sri Lanka. Private ownership, professional management, resort-style amenities and optional rental programme on Sri Lanka's southern coast."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta name="description"
+    content="BEING RESIDENCES is a boutique condominium development in Ahangama, Sri Lanka. Private ownership, professional management, resort-style amenities and optional rental programme on Sri Lanka's southern coast." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    html { scroll-behavior: smooth; }
-    .prop-card--hidden { display: none !important; }
-    .prop-card--active .prop-card__veil { display: none; }
-    .faq__panel { display: none; flex-direction: column; gap: 10px; }
-    .faq__panel--active { display: flex; }
-    .faq__a { display: none; margin-top: 12px; font-size: 13.5px; line-height: 1.65; color: var(--muted); }
-    .faq__item--open .faq__a { display: block; }
-    .faq__item--open .faq__chev { transform: rotate(180deg); }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .prop-card--hidden {
+      display: none !important;
+    }
+
+    .prop-card--active .prop-card__veil {
+      display: none;
+    }
+
+    .faq__panel {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .faq__panel--active {
+      display: flex;
+    }
+
+    .faq__a {
+      display: none;
+      margin-top: 12px;
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    .faq__item--open .faq__a {
+      display: block;
+    }
+
+    .faq__item--open .faq__chev {
+      transform: rotate(180deg);
+    }
   </style>
 </head>
+
 <body>
 
-<!-- ===== NAV ===== -->
-<header class="nav" id="site-nav">
-  <div class="nav__inner">
-    <a href="index.html" class="nav__brand" aria-label="BEING Residences">
-      <img src="assets/logo-nav.png" alt="BEING Residences"/>
-    </a>
-    <nav class="nav__pills">
-      <a class="nav__pill nav__pill--active" href="#top">Home</a>
-      <a class="nav__pill" href="#properties">Residences</a>
-      <a class="nav__pill" href="#about">About</a>
-      <a class="nav__pill" href="#faq">Ownership</a>
-      <a class="nav__pill" href="contact.html">Contact</a>
-    </nav>
-    <div class="nav__right">
-      <a class="nav__social" href="#" aria-label="Instagram">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="site-nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand" aria-label="BEING Residences">
+        <img src="assets/logo-nav.png" alt="BEING Residences" />
       </a>
-      <a class="nav__social" href="#" aria-label="X">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4 4 20"/></svg>
-      </a>
-      <a class="nav__social" href="#" aria-label="LinkedIn">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg>
-      </a>
-      <a class="nav__cta" href="contact.html">
-        <span>Get in Touch</span>
-      </a>
-      <button class="nav__burger" id="nav-burger" aria-label="Open menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-    </div>
-  </div>
-</header>
-
-<!-- ===== MOBILE MENU ===== -->
-<div class="mobile-menu" id="mobile-menu">
-  <button class="mobile-menu__close" id="mobile-menu-close" aria-label="Close menu">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
-  </button>
-  <a href="index.html">Home</a>
-  <a href="#properties">Residences</a>
-  <a href="#about">About</a>
-  <a href="#faq">Ownership</a>
-  <a href="contact.html">Contact</a>
-  <a href="contact.html" class="mobile-menu__cta">Get in Touch</a>
-</div>
-
-<!-- ===== HERO ===== -->
-<section class="hero" id="top">
-  <div class="hero__media">
-    <video autoplay muted loop playsinline preload="auto">
-      <source src="assets/hero-vid.mp4" type="video/mp4"/>
-    </video>
-    <div class="hero__veil" style="background:linear-gradient(180deg,rgba(0,0,0,.315) 0%,rgba(0,0,0,.135) 35%,rgba(0,0,0,.38) 100%);"></div>
-  </div>
-
-  <div class="hero__top">
-    <span class="hero__eyebrow">AHANGAMA · SRI LANKA</span>
-    <span class="hero__eyebrow hero__eyebrow--right">Private Ownership<br/>Managed Hospitality</span>
-  </div>
-
-  <div class="hero__copy">
-    <span class="hero__kicker">BOUTIQUE COASTAL LIVING</span>
-    <h1 class="hero__title">
-      A place to own,<br/>not just to visit.
-    </h1>
-    <p class="hero__sub">Private ownership · Managed hospitality · Long-term value.</p>
-  </div>
-
-  <h2 class="hero__wordmark" aria-hidden="true">BEING<span class="hero__wordmark-sub">RESIDENCES</span></h2>
-
-  <div class="hero__stats">
-    <div class="hero__stat">
-      <div class="hero__stat-num">4<span>types</span></div>
-      <div class="hero__stat-label">Distinct residence categories — from private pool villas to rooftop penthouses.</div>
-    </div>
-    <div class="hero__stat">
-      <div class="hero__stat-num">5<span>min</span></div>
-      <div class="hero__stat-label">Walking distance to Kabalana Beach from BEING RESIDENCES.</div>
-    </div>
-  </div>
-
-  <div class="hero__cta-row">
-    <a class="hero__btn hero__btn--ghost" href="#properties">
-      <span>EXPLORE THE RESIDENCES</span>
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-    </a>
-    <a class="hero__btn hero__btn--solid" href="contact.html">
-      <span>REQUEST INFORMATION</span>
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-    </a>
-  </div>
-
-  <div class="hero__corner hero__corner--left">
-    <div>BEING RESIDENCES</div>
-    <div>Ahangama, Southern Coast</div>
-    <div>Sri Lanka</div>
-  </div>
-  <div class="hero__corner hero__corner--right">
-    Where the South Coast<br/>Comes Alive
-  </div>
-</section>
-
-<!-- ===== ABOUT / EXCELLENCE ===== -->
-<section class="excellence" id="about">
-  <div class="excellence__head">
-    <h2 class="excellence__title">
-      Coastal Living,<br/>Considered in Every Detail
-    </h2>
-  </div>
-  <div class="excellence__grid">
-
-    <div class="excellence__col excellence__col--left">
-      <h3>A boutique lifestyle residence where private ownership meets effortless tropical living.</h3>
-      <p>BEING RESIDENCES sits at the intersection of refined coastal living and thoughtful property ownership. It is not a hotel. It is not a standard residential block. It is a professionally managed lifestyle residence — where owners enjoy the benefits of a tropical retreat with the security and simplicity of private ownership.</p>
-      <a href="#properties" class="btn btn--dark">
-        Explore the Residences
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </a>
-      <div class="excellence__partners">
-        <span class="excellence__partners-label">Shared Amenities</span>
-        <div class="excellence__partners-row">
-          <span class="partner-mark">Resort Pool</span>
-          <span class="partner-mark">Gym</span>
-          <span class="partner-mark">Yoga Studio</span>
-          <span class="partner-mark">Tropical Gardens</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="excellence__col excellence__col--mid">
-      <div class="excellence__photo">
-        <video autoplay muted loop playsinline preload="auto" class="excellence__photo-img">
-          <source src="assets/sec1.mp4" type="video/mp4"/>
-        </video>
-      </div>
-    </div>
-
-    <div class="excellence__col excellence__col--right">
-      <div class="excellence__feature">
-        <h4>Considered Design</h4>
-        <p>Contemporary tropical architecture with a strong indoor-outdoor design language — each residence blurs the line between inside and out. Open plans, generous terraces, and materials that belong in this landscape.</p>
-      </div>
-      <div class="excellence__divider"></div>
-      <div class="excellence__feature">
-        <h4>Professional Management</h4>
-        <p>The complex is maintained to boutique hotel standards by a dedicated hospitality management team. Arrive and the residence is ready. Leave and it remains in perfect order — ownership without the operational weight.</p>
-      </div>
-      <div class="excellence__divider"></div>
-      <div class="excellence__feature">
-        <h4>Optional Rental Income</h4>
-        <p>Owners who wish to generate income may integrate their unit into the managed rental programme — from guest reception to housekeeping, handled end-to-end. Participation is entirely at the owner's discretion.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ===== PROPERTIES / CAROUSEL ===== -->
-<section class="properties" id="properties">
-  <div class="properties__head">
-    <h2 class="properties__title">
-      The Residence<br/>Collection
-    </h2>
-    <div class="properties__intro">
-      <p>Four distinct categories — from private pool villas to rooftop penthouses. Each designed for a different lifestyle, all built for comfortable long-term living with full kitchen facilities.</p>
-      <a href="contact.html" class="properties__view-all">
-        Enquire about a residence
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-  </div>
-
-  <div class="carousel">
-    <div class="carousel__track" id="carousel-track">
-
-      <!-- Card 0: Reef Villas -->
-      <article class="prop-card prop-card--side" data-prop="0" id="prop-card-0">
-        <div class="prop-card__media">
-          <img src="assets/cat-reef-villas.jpeg" alt="Reef Villas" class="prop-card__img"/>
-          <span class="prop-card__tag"><span class="prop-card__tag-dot"></span>Signature</span>
-          <div class="prop-card__veil"></div>
-        </div>
-        <div class="prop-card__body">
-          <div class="prop-card__row">
-            <div>
-              <h3 class="prop-card__name"><span class="prop-card__emoji" aria-hidden="true">🌴</span> Reef Villas</h3>
-              <div class="prop-card__loc">3 or 4-Bedroom · Private Pool</div>
-            </div>
-          </div>
-          <p class="prop-card__desc">Private tropical villas for those who want it all — space, privacy and a pool to call their own. Each villa features a private swimming pool, generous sun terrace, and seamless indoor-outdoor design.</p>
-          <div class="prop-card__meta-row">
-            <div class="prop-card__meta">
-              <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Private pool</span>
-              <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Full kitchen</span>
-              <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Sun terrace</span>
-            </div>
-            <a href="contact.html" class="btn btn--ghost">Enquire</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 1: Surf Pod Apartments -->
-      <article class="prop-card prop-card--active" data-prop="1" id="prop-card-1">
-        <div class="prop-card__media">
-          <img src="assets/cat-surf-pods.jpeg" alt="Surf Pod Apartments" class="prop-card__img"/>
-          <span class="prop-card__tag"><span class="prop-card__tag-dot"></span>Most Efficient</span>
-        </div>
-        <div class="prop-card__body">
-          <div class="prop-card__row">
-            <div>
-              <h3 class="prop-card__name"><span class="prop-card__emoji" aria-hidden="true">🌊</span> Surf Pod Apartments</h3>
-              <div class="prop-card__loc">2-Bedroom · Coastal Residence</div>
-            </div>
-          </div>
-          <p class="prop-card__desc">Thoughtfully designed. Efficiently planned. Everything you need, nothing you don't. A functional, intelligent layout with a fully equipped private kitchen and comfortable living space.</p>
-          <div class="prop-card__meta-row">
-            <div class="prop-card__meta">
-              <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Private kitchen</span>
-              <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Smart layout</span>
-              <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Long-stay ready</span>
-            </div>
-            <a href="contact.html" class="btn btn--ghost">Enquire</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 2: Surf Big Apartments -->
-      <article class="prop-card prop-card--side" data-prop="2" id="prop-card-2">
-        <div class="prop-card__media">
-          <img src="assets/cat-surf-big.jpeg" alt="Surf Big Apartments" class="prop-card__img"/>
-          <span class="prop-card__tag"><span class="prop-card__tag-dot"></span>Most Spacious</span>
-          <div class="prop-card__veil"></div>
-        </div>
-        <div class="prop-card__body">
-          <div class="prop-card__row">
-            <div>
-              <h3 class="prop-card__name"><span class="prop-card__emoji" aria-hidden="true">🏄</span> Surf Big Apartments</h3>
-              <div class="prop-card__loc">3-Bedroom · Family &amp; Remote Work</div>
-            </div>
-          </div>
-          <p class="prop-card__desc">More space. More freedom. For those who stay a little longer. A spacious three-room configuration designed for couples, families, remote teams, or anyone planning a proper long stay.</p>
-          <div class="prop-card__meta-row">
-            <div class="prop-card__meta">
-              <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 3 bedrooms</span>
-              <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Full kitchen</span>
-              <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Generous living areas</span>
-            </div>
-            <a href="contact.html" class="btn btn--ghost">Enquire</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 3: Surf Penthouses -->
-      <article class="prop-card prop-card--hidden" data-prop="3" id="prop-card-3">
-        <div class="prop-card__media">
-          <img src="assets/cat-penthouses.jpeg" alt="Surf Penthouses" class="prop-card__img"/>
-          <span class="prop-card__tag"><span class="prop-card__tag-dot"></span>Top Floor</span>
-          <div class="prop-card__veil"></div>
-        </div>
-        <div class="prop-card__body">
-          <div class="prop-card__row">
-            <div>
-              <h3 class="prop-card__name"><span class="prop-card__emoji" aria-hidden="true">☀️</span> Surf Penthouses</h3>
-              <div class="prop-card__loc">4-Bedroom · Rooftop Residence</div>
-            </div>
-          </div>
-          <p class="prop-card__desc">Rise above. The rooftop experience — elevated in every sense. A large private rooftop terrace, premium finishes, and an optional rooftop pool transform these residences into something truly extraordinary.</p>
-          <div class="prop-card__meta-row">
-            <div class="prop-card__meta">
-              <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Rooftop terrace</span>
-              <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Premium finishes</span>
-              <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Optional rooftop pool</span>
-            </div>
-            <a href="contact.html" class="btn btn--ghost">Enquire</a>
-          </div>
-        </div>
-      </article>
-
-    </div>
-
-    <div class="carousel__controls">
-      <button class="carousel__btn" id="carousel-prev" aria-label="Previous">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 5l-7 7 7 7"/></svg>
-      </button>
-      <div class="carousel__dots" id="carousel-dots">
-        <button class="carousel__dot" aria-label="Go to slide 1"></button>
-        <button class="carousel__dot carousel__dot--on" aria-label="Go to slide 2"></button>
-        <button class="carousel__dot" aria-label="Go to slide 3"></button>
-        <button class="carousel__dot" aria-label="Go to slide 4"></button>
-      </div>
-      <button class="carousel__btn carousel__btn--solid" id="carousel-next" aria-label="Next">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FAQ ===== -->
-<section class="faq" id="faq">
-  <div class="faq__head">
-    <h2 class="faq__title">Frequently Asked Questions</h2>
-    <p class="faq__sub">Everything you need to know about BEING RESIDENCES and ownership in Ahangama.</p>
-  </div>
-
-  <div class="faq__body">
-    <aside class="faq__side">
-      <button class="faq__cat faq__cat--on" data-cat="residences">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9v9M22 18V11a2 2 0 0 0-2-2H10v9M2 14h20"/><circle cx="6" cy="13" r="2"/></svg>
-        <span>Residences &amp; Villas</span>
-      </button>
-      <button class="faq__cat" data-cat="location">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
-        <span>Location &amp; Lifestyle</span>
-      </button>
-      <button class="faq__cat" data-cat="ownership">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21 2-2 2m-7.6 7.6a5.5 5.5 0 1 1-7.78 7.78 5.5 5.5 0 0 1 7.78-7.78zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
-        <span>Ownership</span>
-      </button>
-      <button class="faq__cat" data-cat="management">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9zM10.3 21a2 2 0 0 0 3.4 0"/></svg>
-        <span>Rental Programme</span>
-      </button>
-      <button class="faq__cat" data-cat="amenities">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 5-4 7-4 11a4 4 0 0 0 8 0c0-4-4-6-4-11zM4 18c2 1 4 3 8 3s6-2 8-3"/></svg>
-        <span>Amenities</span>
-      </button>
-
-      <div class="faq__side-card">
-        <div class="faq__side-card-title">Still have questions?</div>
-        <p>Our team responds within one business day — typically much faster.</p>
-        <a href="contact.html" class="faq__side-card-link">
-          Send an enquiry
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      <nav class="nav__pills">
+        <a class="nav__pill nav__pill--active" href="#top">Home</a>
+        <a class="nav__pill" href="#properties">Residences</a>
+        <a class="nav__pill" href="#about">About</a>
+        <a class="nav__pill" href="#faq">Ownership</a>
+        <a class="nav__pill" href="contact.html">Contact</a>
+      </nav>
+      <div class="nav__right">
+        <a class="nav__social" href="#" aria-label="Instagram">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01" />
+          </svg>
         </a>
+        <a class="nav__social" href="#" aria-label="X">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4l16 16M20 4 4 20" />
+          </svg>
+        </a>
+        <a class="nav__social" href="#" aria-label="LinkedIn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" />
+          </svg>
+        </a>
+        <a class="nav__cta" href="contact.html">
+          <span>Get in Touch</span>
+        </a>
+        <button class="nav__burger" id="nav-burger" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
       </div>
-    </aside>
-
-    <!-- Residences panel -->
-    <div class="faq__panel faq__panel--active" id="faq-residences">
-      <div class="faq__list-label">Residences &amp; Villas</div>
-      <button class="faq__item faq__item--open">
-        <div class="faq__item-row">
-          <span class="faq__q">What types of residences are available?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">BEING RESIDENCES offers four distinct categories: Reef Villas (3 or 4-bedroom private villas with pools), Surf Pod Apartments (2-bedroom), Surf Big Apartments (3-bedroom), and Surf Penthouses (4-bedroom rooftop residences). Every unit includes a fully equipped kitchen and is designed for comfortable long-term living.</p>
-      </button>
-      <button class="faq__item">
-        <div class="faq__item-row">
-          <span class="faq__q">Do the Reef Villas include a private pool?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">Yes. Every Reef Villa comes with a private swimming pool, a generous sun terrace, and an open-plan indoor-outdoor design. The Reef Villa Three is a 3-bedroom configuration; the Reef Villa Four offers four bedrooms with an optional additional suite, subject to planning approval.</p>
-      </button>
-      <button class="faq__item">
-        <div class="faq__item-row">
-          <span class="faq__q">What makes the Surf Penthouses different?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">The Surf Penthouses sit at the very top of the building — offering a large private rooftop terrace, elevated views across the landscape, premium finishes, and an optional rooftop pool subject to final planning approval. They represent the definitive BEING RESIDENCES experience.</p>
-      </button>
-      <button class="faq__item">
-        <div class="faq__item-row">
-          <span class="faq__q">Are all units equipped with kitchens?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">Yes. Every residence across all four categories includes a fully equipped private kitchen — designed for those who intend to live properly, not just stay temporarily.</p>
-      </button>
-      <button class="faq__item">
-        <div class="faq__item-row">
-          <span class="faq__q">Can I customise my residence's finishes?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">BEING RESIDENCES is currently in the planning and construction phase. Early-stage buyers may have the opportunity to discuss interior preferences directly with the development team. Please enquire for details on the current scope available.</p>
-      </button>
     </div>
+  </header>
 
-    <!-- Location panel -->
-    <div class="faq__panel" id="faq-location">
-      <div class="faq__list-label">Location &amp; Lifestyle</div>
-      <button class="faq__item faq__item--open">
-        <div class="faq__item-row">
-          <span class="faq__q">Where exactly is BEING RESIDENCES located?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">BEING RESIDENCES is located in Ahangama on Sri Lanka's southern coast — between Galle and Weligama. The development is within walking distance of Kabalana Beach and surrounded by boutique hotels, acclaimed restaurants, and coastal lifestyle venues.</p>
-      </button>
-      <button class="faq__item">
-        <div class="faq__item-row">
-          <span class="faq__q">How far is it from the beach?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">Kabalana Beach is within walking distance of BEING RESIDENCES. The wider Ahangama coastline — including Marshmellow Beach and the Sticks surf area — is just minutes away by foot or a short ride.</p>
-      </button>
-      <button class="faq__item">
-        <div class="faq__item-row">
-          <span class="faq__q">What is the lifestyle like in Ahangama?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">Ahangama blends genuine coastal character with a growing hospitality and dining scene. It attracts a discerning international community of surfers, remote workers, and lifestyle-focused residents. The area offers surf schools, boutique wellness studios, acclaimed restaurants, and artisan cafés.</p>
-      </button>
-      <button class="faq__item">
-        <div class="faq__item-row">
-          <span class="faq__q">Is Galle easily accessible from Ahangama?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">Yes. Galle Fort — a UNESCO World Heritage Site with excellent restaurants, galleries and international amenities — is a short drive from Ahangama. Weligama Bay is similarly close in the other direction.</p>
-      </button>
-      <button class="faq__item">
-        <div class="faq__item-row">
-          <span class="faq__q">Is Ahangama suitable for long stays and remote work?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">Ahangama is exceptionally well suited to long-term stays and remote work. The area has a well-established community of digital nomads and remote professionals, with reliable connectivity, quality cafés, and a lifestyle infrastructure designed around those who choose to stay.</p>
-      </button>
-    </div>
-
-    <!-- Ownership panel -->
-    <div class="faq__panel" id="faq-ownership">
-      <div class="faq__list-label">Ownership</div>
-      <button class="faq__item faq__item--open">
-        <div class="faq__item-row">
-          <span class="faq__q">What is the ownership structure?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">BEING RESIDENCES is structured as a condominium development. Each unit is individually registered in the owner's name as a private freehold condominium, subject to Sri Lankan condominium and property laws.</p>
-      </button>
-      <button class="faq__item">
-        <div class="faq__item-row">
-          <span class="faq__q">Can international buyers purchase a unit?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">We welcome enquiries from international buyers. Ownership is subject to Sri Lankan property regulations applicable to foreign nationals. We recommend engaging a qualified local property lawyer to advise on your specific circumstances.</p>
-      </button>
-      <button class="faq__item">
-        <div class="faq__item-row">
-          <span class="faq__q">What services are included with ownership?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">All owners benefit from professional property and facility management — including maintenance, security, cleaning of common areas, and management of the shared leisure facilities. This is handled by a dedicated hospitality management team.</p>
-      </button>
-      <button class="faq__item">
-        <div class="faq__item-row">
-          <span class="faq__q">Is the rental programme mandatory?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">No. Participation in the managed rental programme is entirely optional. Owners may choose to use their residence exclusively for personal enjoyment, enrol in the rental programme, or combine both.</p>
-      </button>
-      <button class="faq__item">
-        <div class="faq__item-row">
-          <span class="faq__q">What is the current project status?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">BEING RESIDENCES is currently in the planning and construction phase. We are accepting early-stage enquiries and expressions of interest. Please get in touch for the most current updates on the development timeline.</p>
-      </button>
-    </div>
-
-    <!-- Management / Rental panel -->
-    <div class="faq__panel" id="faq-management">
-      <div class="faq__list-label">Rental Programme</div>
-      <button class="faq__item faq__item--open">
-        <div class="faq__item-row">
-          <span class="faq__q">How does the managed rental programme work?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">Owners who wish to generate rental income may integrate their unit into the BEING RESIDENCES managed hospitality programme. The management company handles everything — marketing, distribution, guest reception, housekeeping, maintenance coordination and day-to-day rental operations.</p>
-      </button>
-      <button class="faq__item">
-        <div class="faq__item-row">
-          <span class="faq__q">Who manages the property?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">The development is operated by a professional hospitality management company appointed to maintain BEING RESIDENCES to boutique hotel standards. This ensures the complex remains well-run and well-presented whether you are in residence or not.</p>
-      </button>
-      <button class="faq__item">
-        <div class="faq__item-row">
-          <span class="faq__q">What does the management company handle?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">The management team covers all day-to-day operations: common area maintenance, security, cleaning and facility management. For owners in the rental programme, this extends to marketing, reservations, guest reception, housekeeping and ongoing maintenance coordination.</p>
-      </button>
-      <button class="faq__item">
-        <div class="faq__item-row">
-          <span class="faq__q">What are the management fees?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">Operational terms and management fees will be defined in accordance with the final management company model. These details will be shared fully with prospective buyers during the enquiry process. Please get in touch to be kept informed.</p>
-      </button>
-    </div>
-
-    <!-- Amenities panel -->
-    <div class="faq__panel" id="faq-amenities">
-      <div class="faq__list-label">Amenities</div>
-      <button class="faq__item faq__item--open">
-        <div class="faq__item-row">
-          <span class="faq__q">What shared amenities does BEING RESIDENCES offer?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">The complex includes a resort-style central swimming pool, a fully equipped gym, a yoga and Pilates studio, relaxation and leisure areas, a family leisure area, landscaped tropical gardens, and 24/7 security and hospitality services.</p>
-      </button>
-      <button class="faq__item">
-        <div class="faq__item-row">
-          <span class="faq__q">Is there a gym on site?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">Yes. The gym is fully equipped for a proper workout — not a hotel afterthought. It is included as part of the resort-style amenities available to all residents.</p>
-      </button>
-      <button class="faq__item">
-        <div class="faq__item-row">
-          <span class="faq__q">Is there a yoga or wellness facility?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">Yes. BEING RESIDENCES includes a dedicated yoga and Pilates studio — a level of wellness provision that most developments at this scale simply don't offer.</p>
-      </button>
-      <button class="faq__item">
-        <div class="faq__item-row">
-          <span class="faq__q">Are the shared amenities professionally maintained?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">All shared facilities are maintained by the professional hospitality management team to boutique hotel standards. The entire complex is designed and managed as a lifestyle ecosystem, not a standard residential block.</p>
-      </button>
-      <button class="faq__item">
-        <div class="faq__item-row">
-          <span class="faq__q">Is the central pool open to all residents?</span>
-          <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </div>
-        <p class="faq__a">Yes. The resort-style central pool is the social heart of BEING RESIDENCES — open to all owners and their guests. It is designed for both active swimmers and those who simply want to float, read, and let the afternoon pass at its own pace.</p>
-      </button>
-    </div>
-
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu__close" id="mobile-menu-close" aria-label="Close menu">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round">
+        <path d="M6 6l12 12M18 6 6 18" />
+      </svg>
+    </button>
+    <a href="index.html">Home</a>
+    <a href="#properties">Residences</a>
+    <a href="#about">About</a>
+    <a href="#faq">Ownership</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="mobile-menu__cta">Get in Touch</a>
   </div>
-</section>
 
-<!-- ===== JOURNEY / CTA ===== -->
-<section class="journey" id="cta">
-  <div class="journey__inner">
-    <div class="journey__visual">
-      <img src="assets/journey-swing.jpeg" alt="Tropical outdoor living at BEING RESIDENCES" class="journey__visual-img"/>
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="hero__media">
+      <video autoplay muted loop playsinline preload="auto">
+        <source src="assets/hero-vid.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__veil"
+        style="background:linear-gradient(180deg,rgba(0,0,0,.315) 0%,rgba(0,0,0,.135) 35%,rgba(0,0,0,.38) 100%);"></div>
     </div>
-    <div class="journey__copy">
-      <h2 class="journey__title">
-        Begin Your<br/>Ownership Journey<br/>With <em>Being.</em>
+
+    <div class="hero__top">
+      <span class="hero__eyebrow">AHANGAMA · SRI LANKA</span>
+      <span class="hero__eyebrow hero__eyebrow--right">Private Ownership<br />Managed Hospitality</span>
+    </div>
+
+    <div class="hero__copy">
+      <span class="hero__kicker">BOUTIQUE COASTAL LIVING</span>
+      <h1 class="hero__title">
+        A place to own,<br />not just to visit.
+      </h1>
+      <p class="hero__sub">Private ownership · Managed hospitality · Long-term value.</p>
+    </div>
+
+    <h2 class="hero__wordmark" aria-hidden="true">BEING<span class="hero__wordmark-sub">RESIDENCES</span></h2>
+
+    <div class="hero__stats">
+      <div class="hero__stat">
+        <div class="hero__stat-num">4<span>types</span></div>
+        <div class="hero__stat-label">Distinct residence categories — from private pool villas to rooftop penthouses.
+        </div>
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-num">5<span>min</span></div>
+        <div class="hero__stat-label">Walking distance to Kabalana Beach from BEING RESIDENCES.</div>
+      </div>
+    </div>
+
+    <div class="hero__cta-row">
+      <a class="hero__btn hero__btn--ghost" href="#properties">
+        <span>EXPLORE THE RESIDENCES</span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M13 5l7 7-7 7" />
+        </svg>
+      </a>
+      <a class="hero__btn hero__btn--solid" href="contact.html">
+        <span>REQUEST INFORMATION</span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M13 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="hero__corner hero__corner--left">
+      <div>BEING RESIDENCES</div>
+      <div>Ahangama, Southern Coast</div>
+      <div>Sri Lanka</div>
+    </div>
+    <div class="hero__corner hero__corner--right">
+      Where the South Coast<br />Comes Alive
+    </div>
+  </section>
+
+  <!-- ===== ABOUT / EXCELLENCE ===== -->
+  <section class="excellence" id="about">
+    <div class="excellence__head">
+      <h2 class="excellence__title">
+        Coastal Living,<br />Considered in Every Detail
       </h2>
-      <p class="journey__body">
-        BEING RESIDENCES is currently in the planning and construction phase — an ideal moment to engage directly with the development team and secure your preferred residence.
-      </p>
-      <div class="journey__row">
-        <a href="contact.html" class="btn btn--light">
-          Get in Touch
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </div>
+    <div class="excellence__grid">
+
+      <div class="excellence__col excellence__col--left">
+        <h3>A boutique lifestyle residence where private ownership meets effortless tropical living.</h3>
+        <p>BEING RESIDENCES sits at the intersection of refined coastal living and thoughtful property ownership. It is
+          not a hotel. It is not a standard residential block. It is a professionally managed lifestyle residence —
+          where owners enjoy the benefits of a tropical retreat with the security and simplicity of private ownership.
+        </p>
+        <a href="#properties" class="btn btn--dark">
+          Explore the Residences
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 5l7 7-7 7" />
+          </svg>
         </a>
-        <span class="journey__note">Or reach us at: hello@beingresidences.com</span>
+        <div class="excellence__partners">
+          <span class="excellence__partners-label">Shared Amenities</span>
+          <div class="excellence__partners-row">
+            <span class="partner-mark">Resort Pool,</span>
+            <span class="partner-mark">Gym,</span>
+            <span class="partner-mark">Yoga Studio,</span>
+            <span class="partner-mark">Tropical Gardens.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="excellence__col excellence__col--mid">
+        <div class="excellence__photo">
+          <video autoplay muted loop playsinline preload="auto" class="excellence__photo-img">
+            <source src="assets/sec1.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
+      <div class="excellence__col excellence__col--right">
+        <div class="excellence__feature">
+          <h4>Considered Design</h4>
+          <p>Contemporary tropical architecture with a strong indoor-outdoor design language — each residence blurs the
+            line between inside and out. Open plans, generous terraces, and materials that belong in this landscape.</p>
+        </div>
+        <div class="excellence__divider"></div>
+        <div class="excellence__feature">
+          <h4>Professional Management</h4>
+          <p>The complex is maintained to boutique hotel standards by a dedicated hospitality management team. Arrive
+            and the residence is ready. Leave and it remains in perfect order — ownership without the operational
+            weight.</p>
+        </div>
+        <div class="excellence__divider"></div>
+        <div class="excellence__feature">
+          <h4>Optional Rental Income</h4>
+          <p>Owners who wish to generate income may integrate their unit into the managed rental programme — from guest
+            reception to housekeeping, handled end-to-end. Participation is entirely at the owner's discretion.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== PROPERTIES / CAROUSEL ===== -->
+  <section class="properties" id="properties">
+    <div class="properties__head">
+      <h2 class="properties__title">
+        The Residence<br />Collection
+      </h2>
+      <div class="properties__intro">
+        <p>Four distinct categories — from private pool villas to rooftop penthouses. Each designed for a different
+          lifestyle, all built for comfortable long-term living with full kitchen facilities.</p>
+        <a href="contact.html" class="properties__view-all">
+          Enquire about a residence
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 5l7 7-7 7" />
+          </svg>
+        </a>
       </div>
     </div>
-  </div>
 
-  <div class="connect">
-    <div class="connect__left">
-      <h3 class="connect__title">
-        Stay Informed About<br/>BEING RESIDENCES<br/>And Ownership Opportunities.
-      </h3>
-      <form class="connect__form" onsubmit="return false;">
-        <input type="email" placeholder="Your email address"/>
-        <button type="submit">Register Interest</button>
-      </form>
-    </div>
-    <div class="connect__right">
-      <a href="contact.html" class="connect__card">
-        <div class="connect__card-top">
-          <span>Request the Ownership Brochure</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--sky)"><path d="M7 17 17 7M9 7h8v8"/></svg>
+    <div class="carousel">
+      <div class="carousel__track" id="carousel-track">
+
+        <!-- Card 0: Reef Villas -->
+        <article class="prop-card prop-card--side" data-prop="0" id="prop-card-0">
+          <div class="prop-card__media">
+            <img src="assets/cat-reef-villas.jpeg" alt="Reef Villas" class="prop-card__img" />
+            <span class="prop-card__tag"><span class="prop-card__tag-dot"></span>Signature</span>
+            <div class="prop-card__veil"></div>
+          </div>
+          <div class="prop-card__body">
+            <div class="prop-card__row">
+              <div>
+                <h3 class="prop-card__name"><span class="prop-card__emoji" aria-hidden="true">🌴</span> Reef Villas</h3>
+                <div class="prop-card__loc">3 or 4-Bedroom · Private Pool</div>
+              </div>
+            </div>
+            <p class="prop-card__desc">Private tropical villas for those who want it all — space, privacy and a pool to
+              call their own. Each villa features a private swimming pool, generous sun terrace, and seamless
+              indoor-outdoor design.</p>
+            <div class="prop-card__meta-row">
+              <div class="prop-card__btns">
+                <button class="prop-card__gallery-btn" data-gallery="reef-villas">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                  View Photos
+                </button>
+                <a href="contact.html" class="btn btn--ghost">Enquire</a>
+              </div>
+              <div class="prop-card__meta">
+                <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg> Private pool</span>
+                <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg> Full kitchen</span>
+                <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg> Sun terrace</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 1: Surf Pod Apartments -->
+        <article class="prop-card prop-card--active" data-prop="1" id="prop-card-1">
+          <div class="prop-card__media">
+            <img src="assets/cat-surf-pods.jpeg" alt="Surf Pod Apartments" class="prop-card__img" />
+            <span class="prop-card__tag"><span class="prop-card__tag-dot"></span>Most Efficient</span>
+          </div>
+          <div class="prop-card__body">
+            <div class="prop-card__row">
+              <div>
+                <h3 class="prop-card__name"><span class="prop-card__emoji" aria-hidden="true">🌊</span> Surf Pod
+                  Apartments</h3>
+                <div class="prop-card__loc">2-Bedroom · Coastal Residence</div>
+              </div>
+            </div>
+            <p class="prop-card__desc">Thoughtfully designed. Efficiently planned. Everything you need, nothing you
+              don't. A functional, intelligent layout with a fully equipped private kitchen and comfortable living
+              space.</p>
+            <div class="prop-card__meta-row">
+              <div class="prop-card__btns">
+                <button class="prop-card__gallery-btn" data-gallery="surf-pods">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                  View Photos
+                </button>
+                <a href="contact.html" class="btn btn--ghost">Enquire</a>
+              </div>
+              <div class="prop-card__meta">
+                <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg> Private kitchen</span>
+                <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg> Smart layout</span>
+                <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg> Long-stay ready</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Surf Big Apartments -->
+        <article class="prop-card prop-card--side" data-prop="2" id="prop-card-2">
+          <div class="prop-card__media">
+            <img src="assets/cat-surf-big.jpeg" alt="Surf Big Apartments" class="prop-card__img" />
+            <span class="prop-card__tag"><span class="prop-card__tag-dot"></span>Most Spacious</span>
+            <div class="prop-card__veil"></div>
+          </div>
+          <div class="prop-card__body">
+            <div class="prop-card__row">
+              <div>
+                <h3 class="prop-card__name"><span class="prop-card__emoji" aria-hidden="true">🏄</span> Surf Big
+                  Apartments</h3>
+                <div class="prop-card__loc">3-Bedroom · Family &amp; Remote Work</div>
+              </div>
+            </div>
+            <p class="prop-card__desc">More space. More freedom. For those who stay a little longer. A spacious
+              three-room configuration designed for couples, families, remote teams, or anyone planning a proper long
+              stay.</p>
+            <div class="prop-card__meta-row">
+              <div class="prop-card__btns">
+                <button class="prop-card__gallery-btn" data-gallery="surf-big">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                  View Photos
+                </button>
+                <a href="contact.html" class="btn btn--ghost">Enquire</a>
+              </div>
+              <div class="prop-card__meta">
+                <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg> 3 bedrooms</span>
+                <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg> Full kitchen</span>
+                <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg> Generous living areas</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Surf Penthouses -->
+        <article class="prop-card prop-card--hidden" data-prop="3" id="prop-card-3">
+          <div class="prop-card__media">
+            <img src="assets/cat-penthouses.jpeg" alt="Surf Penthouses" class="prop-card__img" />
+            <span class="prop-card__tag"><span class="prop-card__tag-dot"></span>Top Floor</span>
+            <div class="prop-card__veil"></div>
+          </div>
+          <div class="prop-card__body">
+            <div class="prop-card__row">
+              <div>
+                <h3 class="prop-card__name"><span class="prop-card__emoji" aria-hidden="true">☀️</span> Surf Penthouses
+                </h3>
+                <div class="prop-card__loc">4-Bedroom · Rooftop Residence</div>
+              </div>
+            </div>
+            <p class="prop-card__desc">Rise above. The rooftop experience — elevated in every sense. A large private
+              rooftop terrace, premium finishes, and an optional rooftop pool transform these residences into something
+              truly extraordinary.</p>
+            <div class="prop-card__meta-row">
+              <div class="prop-card__btns">
+                <button class="prop-card__gallery-btn" data-gallery="penthouses">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                  View Photos
+                </button>
+                <a href="contact.html" class="btn btn--ghost">Enquire</a>
+              </div>
+              <div class="prop-card__meta">
+                <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg> Rooftop terrace</span>
+                <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg> Premium finishes</span>
+                <span class="prop-card__meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg> Optional rooftop pool</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="carousel__controls">
+        <button class="carousel__btn" id="carousel-prev" aria-label="Previous">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M11 5l-7 7 7 7" />
+          </svg>
+        </button>
+        <div class="carousel__dots" id="carousel-dots">
+          <button class="carousel__dot" aria-label="Go to slide 1"></button>
+          <button class="carousel__dot carousel__dot--on" aria-label="Go to slide 2"></button>
+          <button class="carousel__dot" aria-label="Go to slide 3"></button>
+          <button class="carousel__dot" aria-label="Go to slide 4"></button>
         </div>
-        <p>Receive detailed information on residence categories, ownership structure, the rental programme, and the development timeline.</p>
-      </a>
-      <a href="contact.html" class="connect__card">
-        <div class="connect__card-top">
-          <span>Enquire About a Residence</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--sky)"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        <button class="carousel__btn carousel__btn--solid" id="carousel-next" aria-label="Next">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq" id="faq">
+    <div class="faq__head">
+      <h2 class="faq__title">Frequently Asked Questions</h2>
+      <p class="faq__sub">Everything you need to know about BEING RESIDENCES and ownership in Ahangama.</p>
+    </div>
+
+    <div class="faq__body">
+      <aside class="faq__side">
+        <button class="faq__cat faq__cat--on" data-cat="residences">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 9v9M22 18V11a2 2 0 0 0-2-2H10v9M2 14h20" />
+            <circle cx="6" cy="13" r="2" />
+          </svg>
+          <span>Residences &amp; Villas</span>
+        </button>
+        <button class="faq__cat" data-cat="location">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <span>Location &amp; Lifestyle</span>
+        </button>
+        <button class="faq__cat" data-cat="ownership">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="m21 2-2 2m-7.6 7.6a5.5 5.5 0 1 1-7.78 7.78 5.5 5.5 0 0 1 7.78-7.78zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4" />
+          </svg>
+          <span>Ownership</span>
+        </button>
+        <button class="faq__cat" data-cat="management">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9zM10.3 21a2 2 0 0 0 3.4 0" />
+          </svg>
+          <span>Rental Programme</span>
+        </button>
+        <button class="faq__cat" data-cat="amenities">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2c0 5-4 7-4 11a4 4 0 0 0 8 0c0-4-4-6-4-11zM4 18c2 1 4 3 8 3s6-2 8-3" />
+          </svg>
+          <span>Amenities</span>
+        </button>
+
+        <div class="faq__side-card">
+          <div class="faq__side-card-title">Still have questions?</div>
+          <p>Our team responds within one business day — typically much faster.</p>
+          <a href="contact.html" class="faq__side-card-link">
+            Send an enquiry
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </a>
         </div>
-        <p>Tell us which category interests you and our team will follow up within one business day.</p>
+      </aside>
+
+      <!-- Residences panel -->
+      <div class="faq__panel faq__panel--active" id="faq-residences">
+        <div class="faq__list-label">Residences &amp; Villas</div>
+        <button class="faq__item faq__item--open">
+          <div class="faq__item-row">
+            <span class="faq__q">What types of residences are available?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">BEING RESIDENCES offers four distinct categories: Reef Villas (3 or 4-bedroom private villas
+            with pools), Surf Pod Apartments (2-bedroom), Surf Big Apartments (3-bedroom), and Surf Penthouses
+            (4-bedroom rooftop residences). Every unit includes a fully equipped kitchen and is designed for comfortable
+            long-term living.</p>
+        </button>
+        <button class="faq__item">
+          <div class="faq__item-row">
+            <span class="faq__q">Do the Reef Villas include a private pool?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">Yes. Every Reef Villa comes with a private swimming pool, a generous sun terrace, and an
+            open-plan indoor-outdoor design. The Reef Villa Three is a 3-bedroom configuration; the Reef Villa Four
+            offers four bedrooms with an optional additional suite, subject to planning approval.</p>
+        </button>
+        <button class="faq__item">
+          <div class="faq__item-row">
+            <span class="faq__q">What makes the Surf Penthouses different?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">The Surf Penthouses sit at the very top of the building — offering a large private rooftop
+            terrace, elevated views across the landscape, premium finishes, and an optional rooftop pool subject to
+            final planning approval. They represent the definitive BEING RESIDENCES experience.</p>
+        </button>
+        <button class="faq__item">
+          <div class="faq__item-row">
+            <span class="faq__q">Are all units equipped with kitchens?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">Yes. Every residence across all four categories includes a fully equipped private kitchen —
+            designed for those who intend to live properly, not just stay temporarily.</p>
+        </button>
+        <button class="faq__item">
+          <div class="faq__item-row">
+            <span class="faq__q">Can I customise my residence's finishes?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">BEING RESIDENCES is currently in the planning and construction phase. Early-stage buyers may
+            have the opportunity to discuss interior preferences directly with the development team. Please enquire for
+            details on the current scope available.</p>
+        </button>
+      </div>
+
+      <!-- Location panel -->
+      <div class="faq__panel" id="faq-location">
+        <div class="faq__list-label">Location &amp; Lifestyle</div>
+        <button class="faq__item faq__item--open">
+          <div class="faq__item-row">
+            <span class="faq__q">Where exactly is BEING RESIDENCES located?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">BEING RESIDENCES is located in Ahangama on Sri Lanka's southern coast — between Galle and
+            Weligama. The development is within walking distance of Kabalana Beach and surrounded by boutique hotels,
+            acclaimed restaurants, and coastal lifestyle venues.</p>
+        </button>
+        <button class="faq__item">
+          <div class="faq__item-row">
+            <span class="faq__q">How far is it from the beach?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">Kabalana Beach is within walking distance of BEING RESIDENCES. The wider Ahangama coastline
+            — including Marshmellow Beach and the Sticks surf area — is just minutes away by foot or a short ride.</p>
+        </button>
+        <button class="faq__item">
+          <div class="faq__item-row">
+            <span class="faq__q">What is the lifestyle like in Ahangama?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">Ahangama blends genuine coastal character with a growing hospitality and dining scene. It
+            attracts a discerning international community of surfers, remote workers, and lifestyle-focused residents.
+            The area offers surf schools, boutique wellness studios, acclaimed restaurants, and artisan cafés.</p>
+        </button>
+        <button class="faq__item">
+          <div class="faq__item-row">
+            <span class="faq__q">Is Galle easily accessible from Ahangama?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">Yes. Galle Fort — a UNESCO World Heritage Site with excellent restaurants, galleries and
+            international amenities — is a short drive from Ahangama. Weligama Bay is similarly close in the other
+            direction.</p>
+        </button>
+        <button class="faq__item">
+          <div class="faq__item-row">
+            <span class="faq__q">Is Ahangama suitable for long stays and remote work?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">Ahangama is exceptionally well suited to long-term stays and remote work. The area has a
+            well-established community of digital nomads and remote professionals, with reliable connectivity, quality
+            cafés, and a lifestyle infrastructure designed around those who choose to stay.</p>
+        </button>
+      </div>
+
+      <!-- Ownership panel -->
+      <div class="faq__panel" id="faq-ownership">
+        <div class="faq__list-label">Ownership</div>
+        <button class="faq__item faq__item--open">
+          <div class="faq__item-row">
+            <span class="faq__q">What is the ownership structure?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">BEING RESIDENCES is structured as a condominium development. Each unit is individually
+            registered in the owner's name as a private freehold condominium, subject to Sri Lankan condominium and
+            property laws.</p>
+        </button>
+        <button class="faq__item">
+          <div class="faq__item-row">
+            <span class="faq__q">Can international buyers purchase a unit?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">We welcome enquiries from international buyers. Ownership is subject to Sri Lankan property
+            regulations applicable to foreign nationals. We recommend engaging a qualified local property lawyer to
+            advise on your specific circumstances.</p>
+        </button>
+        <button class="faq__item">
+          <div class="faq__item-row">
+            <span class="faq__q">What services are included with ownership?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">All owners benefit from professional property and facility management — including
+            maintenance, security, cleaning of common areas, and management of the shared leisure facilities. This is
+            handled by a dedicated hospitality management team.</p>
+        </button>
+        <button class="faq__item">
+          <div class="faq__item-row">
+            <span class="faq__q">Is the rental programme mandatory?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">No. Participation in the managed rental programme is entirely optional. Owners may choose to
+            use their residence exclusively for personal enjoyment, enrol in the rental programme, or combine both.</p>
+        </button>
+        <button class="faq__item">
+          <div class="faq__item-row">
+            <span class="faq__q">What is the current project status?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">BEING RESIDENCES is currently in the planning and construction phase. We are accepting
+            early-stage enquiries and expressions of interest. Please get in touch for the most current updates on the
+            development timeline.</p>
+        </button>
+      </div>
+
+      <!-- Management / Rental panel -->
+      <div class="faq__panel" id="faq-management">
+        <div class="faq__list-label">Rental Programme</div>
+        <button class="faq__item faq__item--open">
+          <div class="faq__item-row">
+            <span class="faq__q">How does the managed rental programme work?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">Owners who wish to generate rental income may integrate their unit into the BEING RESIDENCES
+            managed hospitality programme. The management company handles everything — marketing, distribution, guest
+            reception, housekeeping, maintenance coordination and day-to-day rental operations.</p>
+        </button>
+        <button class="faq__item">
+          <div class="faq__item-row">
+            <span class="faq__q">Who manages the property?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">The development is operated by a professional hospitality management company appointed to
+            maintain BEING RESIDENCES to boutique hotel standards. This ensures the complex remains well-run and
+            well-presented whether you are in residence or not.</p>
+        </button>
+        <button class="faq__item">
+          <div class="faq__item-row">
+            <span class="faq__q">What does the management company handle?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">The management team covers all day-to-day operations: common area maintenance, security,
+            cleaning and facility management. For owners in the rental programme, this extends to marketing,
+            reservations, guest reception, housekeeping and ongoing maintenance coordination.</p>
+        </button>
+        <button class="faq__item">
+          <div class="faq__item-row">
+            <span class="faq__q">What are the management fees?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">Operational terms and management fees will be defined in accordance with the final
+            management company model. These details will be shared fully with prospective buyers during the enquiry
+            process. Please get in touch to be kept informed.</p>
+        </button>
+      </div>
+
+      <!-- Amenities panel -->
+      <div class="faq__panel" id="faq-amenities">
+        <div class="faq__list-label">Amenities</div>
+        <button class="faq__item faq__item--open">
+          <div class="faq__item-row">
+            <span class="faq__q">What shared amenities does BEING RESIDENCES offer?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">The complex includes a resort-style central swimming pool, a fully equipped gym, a yoga and
+            Pilates studio, relaxation and leisure areas, a family leisure area, landscaped tropical gardens, and 24/7
+            security and hospitality services.</p>
+        </button>
+        <button class="faq__item">
+          <div class="faq__item-row">
+            <span class="faq__q">Is there a gym on site?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">Yes. The gym is fully equipped for a proper workout — not a hotel afterthought. It is
+            included as part of the resort-style amenities available to all residents.</p>
+        </button>
+        <button class="faq__item">
+          <div class="faq__item-row">
+            <span class="faq__q">Is there a yoga or wellness facility?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">Yes. BEING RESIDENCES includes a dedicated yoga and Pilates studio — a level of wellness
+            provision that most developments at this scale simply don't offer.</p>
+        </button>
+        <button class="faq__item">
+          <div class="faq__item-row">
+            <span class="faq__q">Are the shared amenities professionally maintained?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">All shared facilities are maintained by the professional hospitality management team to
+            boutique hotel standards. The entire complex is designed and managed as a lifestyle ecosystem, not a
+            standard residential block.</p>
+        </button>
+        <button class="faq__item">
+          <div class="faq__item-row">
+            <span class="faq__q">Is the central pool open to all residents?</span>
+            <span class="faq__chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg></span>
+          </div>
+          <p class="faq__a">Yes. The resort-style central pool is the social heart of BEING RESIDENCES — open to all
+            owners and their guests. It is designed for both active swimmers and those who simply want to float, read,
+            and let the afternoon pass at its own pace.</p>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== JOURNEY / CTA ===== -->
+  <section class="journey" id="cta">
+    <div class="journey__inner">
+      <div class="journey__visual">
+        <img src="assets/journey-swing.jpeg" alt="Tropical outdoor living at BEING RESIDENCES"
+          class="journey__visual-img" />
+      </div>
+      <div class="journey__copy">
+        <h2 class="journey__title">
+          Begin Your<br />Ownership Journey<br />With <em>Being.</em>
+        </h2>
+        <p class="journey__body">
+          BEING RESIDENCES is currently in the planning and construction phase — an ideal moment to engage directly with
+          the development team and secure your preferred residence.
+        </p>
+        <div class="journey__row">
+          <a href="contact.html" class="btn btn--light">
+            Get in Touch
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </a>
+          <span class="journey__note">Or reach us at: hello@beingresidences.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="connect">
+      <div class="connect__left">
+        <h3 class="connect__title">
+          Stay Informed About<br />BEING RESIDENCES<br />And Ownership Opportunities.
+        </h3>
+        <form class="connect__form" onsubmit="return false;">
+          <input type="email" placeholder="Your email address" />
+          <button type="submit">Register Interest</button>
+        </form>
+      </div>
+      <div class="connect__right">
+        <a href="contact.html" class="connect__card">
+          <div class="connect__card-top">
+            <span>Request the Ownership Brochure</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" style="color:var(--sky)">
+              <path d="M7 17 17 7M9 7h8v8" />
+            </svg>
+          </div>
+          <p>Receive detailed information on residence categories, ownership structure, the rental programme, and the
+            development timeline.</p>
+        </a>
+        <a href="contact.html" class="connect__card">
+          <div class="connect__card-top">
+            <span>Enquire About a Residence</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" style="color:var(--sky)">
+              <path d="M7 17 17 7M9 7h8v8" />
+            </svg>
+          </div>
+          <p>Tell us which category interests you and our team will follow up within one business day.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__top">
+      <a href="index.html" class="footer__brand">
+        <img src="assets/logo-white.png" alt="BEING Residences" />
       </a>
+      <nav class="footer__nav">
+        <a href="#top">Home</a>
+        <a href="#about">About</a>
+        <a href="#properties">Residences
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </a>
+        <a href="#faq">Ownership</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
+
+    <div class="footer__grid">
+      <div class="footer__col">
+        <h5>Contact</h5>
+        <a href="mailto:hello@beingresidences.com">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" style="color:var(--sky)">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m22 6-10 7L2 6" />
+          </svg>
+          hello@beingresidences.com
+        </a>
+        <a href="mailto:press@beingresidences.com">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" style="color:var(--sky)">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m22 6-10 7L2 6" />
+          </svg>
+          press@beingresidences.com
+        </a>
+      </div>
+      <div class="footer__col">
+        <h5>Location</h5>
+        <p>Ahangama<br />Southern Coast, Sri Lanka</p>
+        <p>Between Galle<br />and Weligama</p>
+      </div>
+      <div class="footer__col">
+        <h5>Residences</h5>
+        <a href="#properties">Reef Villas</a>
+        <a href="#properties">Surf Pod Apartments</a>
+        <a href="#properties">Surf Big Apartments</a>
+        <a href="#properties">Surf Penthouses</a>
+      </div>
+      <div class="footer__col">
+        <h5>The Project</h5>
+        <a href="#about">About the Development</a>
+        <a href="#faq">Ownership Model</a>
+        <a href="#faq">Rental Programme</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© 2026 BEING RESIDENCES. All rights reserved.</span>
+      <div>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== PHOTO GALLERY OVERLAY ===== -->
+  <div class="gallery-overlay" id="gallery-overlay" role="dialog" aria-modal="true" aria-label="Photo gallery">
+
+    <!-- Top bar -->
+    <div class="gallery-bar">
+      <div class="gallery-bar-left">
+        <span class="gallery-title" id="gallery-title"></span>
+        <span class="gallery-counter" id="gallery-counter"></span>
+      </div>
+      <button class="gallery-close" id="gallery-close" aria-label="Close gallery">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+
+    <!-- Main image -->
+    <div class="gallery-canvas">
+      <button class="gallery-nav gallery-nav--prev" id="gallery-prev" aria-label="Previous">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="gallery-img-wrap">
+        <img class="gallery-img" id="gallery-img" src="" alt="" />
+      </div>
+      <button class="gallery-nav gallery-nav--next" id="gallery-next" aria-label="Next">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+
+    <!-- Thumbnail strip -->
+    <div class="gallery-strip">
+      <div class="gallery-thumbs" id="gallery-thumbs"></div>
+    </div>
+
   </div>
-</section>
 
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="footer__top">
-    <a href="index.html" class="footer__brand">
-      <img src="assets/logo-white.png" alt="BEING Residences"/>
-    </a>
-    <nav class="footer__nav">
-      <a href="#top">Home</a>
-      <a href="#about">About</a>
-      <a href="#properties">Residences
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-      </a>
-      <a href="#faq">Ownership</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
+  <script>
+    // ===== NAV SCROLL =====
+    const siteNav = document.getElementById('site-nav');
+    window.addEventListener('scroll', () => {
+      siteNav.classList.toggle('nav--scrolled', window.scrollY > 40);
+    });
 
-  <div class="footer__grid">
-    <div class="footer__col">
-      <h5>Contact</h5>
-      <a href="mailto:hello@beingresidences.com">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--sky)"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
-        hello@beingresidences.com
-      </a>
-      <a href="mailto:press@beingresidences.com">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--sky)"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
-        press@beingresidences.com
-      </a>
-    </div>
-    <div class="footer__col">
-      <h5>Location</h5>
-      <p>Ahangama<br/>Southern Coast, Sri Lanka</p>
-      <p>Between Galle<br/>and Weligama</p>
-    </div>
-    <div class="footer__col">
-      <h5>Residences</h5>
-      <a href="#properties">Reef Villas</a>
-      <a href="#properties">Surf Pod Apartments</a>
-      <a href="#properties">Surf Big Apartments</a>
-      <a href="#properties">Surf Penthouses</a>
-    </div>
-    <div class="footer__col">
-      <h5>The Project</h5>
-      <a href="#about">About the Development</a>
-      <a href="#faq">Ownership Model</a>
-      <a href="#faq">Rental Programme</a>
-      <a href="contact.html">Contact Us</a>
-    </div>
-  </div>
+    // ===== MOBILE MENU =====
+    const mobileMenu = document.getElementById('mobile-menu');
+    document.getElementById('nav-burger').addEventListener('click', () => {
+      mobileMenu.classList.add('mobile-menu--open');
+      document.body.style.overflow = 'hidden';
+    });
+    document.getElementById('mobile-menu-close').addEventListener('click', () => {
+      mobileMenu.classList.remove('mobile-menu--open');
+      document.body.style.overflow = '';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('mobile-menu--open');
+        document.body.style.overflow = '';
+      });
+    });
 
-  <div class="footer__bottom">
-    <span>© 2026 BEING RESIDENCES. All rights reserved.</span>
-    <div>
-      <a href="terms.html">Terms &amp; Conditions</a>
-      <a href="privacy-policy.html">Privacy Policy</a>
-    </div>
-  </div>
-</footer>
+    // ===== CAROUSEL =====
+    const TOTAL = 4;
+    let carouselActive = 1;
 
-<script>
-// ===== NAV SCROLL =====
-const siteNav = document.getElementById('site-nav');
-window.addEventListener('scroll', () => {
-  siteNav.classList.toggle('nav--scrolled', window.scrollY > 40);
-});
+    function updateCarousel() {
+      const prevIdx = (carouselActive - 1 + TOTAL) % TOTAL;
+      const nextIdx = (carouselActive + 1) % TOTAL;
 
-// ===== MOBILE MENU =====
-const mobileMenu = document.getElementById('mobile-menu');
-document.getElementById('nav-burger').addEventListener('click', () => {
-  mobileMenu.classList.add('mobile-menu--open');
-  document.body.style.overflow = 'hidden';
-});
-document.getElementById('mobile-menu-close').addEventListener('click', () => {
-  mobileMenu.classList.remove('mobile-menu--open');
-  document.body.style.overflow = '';
-});
-mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('mobile-menu--open');
-    document.body.style.overflow = '';
-  });
-});
+      for (let i = 0; i < TOTAL; i++) {
+        const card = document.getElementById('prop-card-' + i);
+        card.className = 'prop-card';
+        if (i === carouselActive) {
+          card.classList.add('prop-card--active');
+          card.style.order = '2';
+        } else if (i === prevIdx) {
+          card.classList.add('prop-card--side');
+          card.style.order = '1';
+        } else if (i === nextIdx) {
+          card.classList.add('prop-card--side');
+          card.style.order = '3';
+        } else {
+          card.classList.add('prop-card--hidden');
+          card.style.order = '4';
+        }
+      }
 
-// ===== CAROUSEL =====
-const TOTAL = 4;
-let carouselActive = 1;
+      const prevCard = document.getElementById('prop-card-' + prevIdx);
+      const nextCard = document.getElementById('prop-card-' + nextIdx);
+      prevCard.style.cursor = 'pointer';
+      nextCard.style.cursor = 'pointer';
+      prevCard.onclick = () => { carouselActive = prevIdx; updateCarousel(); };
+      nextCard.onclick = () => { carouselActive = nextIdx; updateCarousel(); };
+      document.getElementById('prop-card-' + carouselActive).onclick = null;
+      document.getElementById('prop-card-' + carouselActive).style.cursor = '';
 
-function updateCarousel() {
-  const prevIdx = (carouselActive - 1 + TOTAL) % TOTAL;
-  const nextIdx = (carouselActive + 1) % TOTAL;
-
-  for (let i = 0; i < TOTAL; i++) {
-    const card = document.getElementById('prop-card-' + i);
-    card.className = 'prop-card';
-    if (i === carouselActive) {
-      card.classList.add('prop-card--active');
-      card.style.order = '2';
-    } else if (i === prevIdx) {
-      card.classList.add('prop-card--side');
-      card.style.order = '1';
-    } else if (i === nextIdx) {
-      card.classList.add('prop-card--side');
-      card.style.order = '3';
-    } else {
-      card.classList.add('prop-card--hidden');
-      card.style.order = '4';
-    }
-  }
-
-  const prevCard = document.getElementById('prop-card-' + prevIdx);
-  const nextCard = document.getElementById('prop-card-' + nextIdx);
-  prevCard.style.cursor = 'pointer';
-  nextCard.style.cursor = 'pointer';
-  prevCard.onclick = () => { carouselActive = prevIdx; updateCarousel(); };
-  nextCard.onclick = () => { carouselActive = nextIdx; updateCarousel(); };
-  document.getElementById('prop-card-' + carouselActive).onclick = null;
-  document.getElementById('prop-card-' + carouselActive).style.cursor = '';
-
-  document.querySelectorAll('.carousel__dot').forEach((dot, i) => {
-    dot.classList.toggle('carousel__dot--on', i === carouselActive);
-    dot.onclick = () => { carouselActive = i; updateCarousel(); };
-  });
-}
-
-document.getElementById('carousel-prev').addEventListener('click', () => {
-  carouselActive = (carouselActive - 1 + TOTAL) % TOTAL;
-  updateCarousel();
-});
-document.getElementById('carousel-next').addEventListener('click', () => {
-  carouselActive = (carouselActive + 1) % TOTAL;
-  updateCarousel();
-});
-
-updateCarousel();
-
-// ===== FAQ =====
-document.querySelectorAll('.faq__cat').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const cat = btn.dataset.cat;
-    document.querySelectorAll('.faq__cat').forEach(b => b.classList.remove('faq__cat--on'));
-    btn.classList.add('faq__cat--on');
-    document.querySelectorAll('.faq__panel').forEach(p => p.classList.remove('faq__panel--active'));
-    const panel = document.getElementById('faq-' + cat);
-    if (panel) {
-      panel.classList.add('faq__panel--active');
-      panel.querySelectorAll('.faq__item').forEach((item, i) => {
-        item.classList.toggle('faq__item--open', i === 0);
+      document.querySelectorAll('.carousel__dot').forEach((dot, i) => {
+        dot.classList.toggle('carousel__dot--on', i === carouselActive);
+        dot.onclick = () => { carouselActive = i; updateCarousel(); };
       });
     }
-  });
-});
 
-document.querySelectorAll('.faq__panel').forEach(panel => {
-  panel.addEventListener('click', e => {
-    const item = e.target.closest('.faq__item');
-    if (!item) return;
-    const isOpen = item.classList.contains('faq__item--open');
-    panel.querySelectorAll('.faq__item').forEach(i => i.classList.remove('faq__item--open'));
-    if (!isOpen) item.classList.add('faq__item--open');
-  });
-});
-</script>
+    document.getElementById('carousel-prev').addEventListener('click', () => {
+      carouselActive = (carouselActive - 1 + TOTAL) % TOTAL;
+      updateCarousel();
+    });
+    document.getElementById('carousel-next').addEventListener('click', () => {
+      carouselActive = (carouselActive + 1) % TOTAL;
+      updateCarousel();
+    });
+
+    updateCarousel();
+
+    // ===== FAQ =====
+    document.querySelectorAll('.faq__cat').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cat = btn.dataset.cat;
+        document.querySelectorAll('.faq__cat').forEach(b => b.classList.remove('faq__cat--on'));
+        btn.classList.add('faq__cat--on');
+        document.querySelectorAll('.faq__panel').forEach(p => p.classList.remove('faq__panel--active'));
+        const panel = document.getElementById('faq-' + cat);
+        if (panel) {
+          panel.classList.add('faq__panel--active');
+          panel.querySelectorAll('.faq__item').forEach((item, i) => {
+            item.classList.toggle('faq__item--open', i === 0);
+          });
+        }
+      });
+    });
+
+    document.querySelectorAll('.faq__panel').forEach(panel => {
+      panel.addEventListener('click', e => {
+        const item = e.target.closest('.faq__item');
+        if (!item) return;
+        const isOpen = item.classList.contains('faq__item--open');
+        panel.querySelectorAll('.faq__item').forEach(i => i.classList.remove('faq__item--open'));
+        if (!isOpen) item.classList.add('faq__item--open');
+      });
+    });
+
+    // ===== PHOTO GALLERY =====
+    const GALLERIES = {
+      'reef-villas':  { title: 'Reef Villas',          images: ['assets/cat-reef-villas.jpeg','assets/pool-loungers.jpeg','assets/yoga-deck.jpeg','assets/yoga-path.jpeg','assets/journey-swing.jpeg'] },
+      'surf-pods':    { title: 'Surf Pod Apartments',   images: ['assets/cat-surf-pods.jpeg','assets/pool-loungers.jpeg','assets/yoga-deck.jpeg','assets/yoga-path.jpeg','assets/journey-swing.jpeg'] },
+      'surf-big':     { title: 'Surf Big Apartments',   images: ['assets/cat-surf-big.jpeg','assets/pool-loungers.jpeg','assets/yoga-deck.jpeg','assets/yoga-path.jpeg','assets/journey-swing.jpeg'] },
+      'penthouses':   { title: 'Surf Penthouses',       images: ['assets/cat-penthouses.jpeg','assets/pool-loungers.jpeg','assets/yoga-deck.jpeg','assets/yoga-path.jpeg','assets/journey-swing.jpeg'] }
+    };
+
+    let gImages = [], gIdx = 0;
+    const gOverlay  = document.getElementById('gallery-overlay');
+    const gImg      = document.getElementById('gallery-img');
+    const gTitle    = document.getElementById('gallery-title');
+    const gCounter  = document.getElementById('gallery-counter');
+    const gThumbs   = document.getElementById('gallery-thumbs');
+
+    function openGallery(id) {
+      const g = GALLERIES[id]; if (!g) return;
+      gImages = g.images; gIdx = 0;
+      gTitle.textContent = g.title;
+      gThumbs.innerHTML = '';
+      gImages.forEach((src, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'gallery-thumb';
+        btn.setAttribute('aria-label', 'Photo ' + (i + 1));
+        const img = document.createElement('img');
+        img.src = src; img.alt = '';
+        btn.appendChild(img);
+        btn.addEventListener('click', () => { gIdx = i; switchImage(); });
+        gThumbs.appendChild(btn);
+      });
+      gImg.src = gImages[0];
+      gImg.style.opacity = '1';
+      refreshMeta();
+      gOverlay.classList.add('gallery-overlay--open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function switchImage() {
+      gImg.style.opacity = '0';
+      gImg.style.transform = 'scale(0.97)';
+      setTimeout(() => {
+        gImg.src = gImages[gIdx];
+        gImg.style.opacity = '1';
+        gImg.style.transform = 'scale(1)';
+        refreshMeta();
+      }, 200);
+    }
+
+    function refreshMeta() {
+      gCounter.textContent = (gIdx + 1) + ' / ' + gImages.length;
+      gThumbs.querySelectorAll('.gallery-thumb').forEach((t, i) => {
+        t.classList.toggle('gallery-thumb--on', i === gIdx);
+      });
+      const active = gThumbs.querySelectorAll('.gallery-thumb')[gIdx];
+      if (active) active.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+
+    function closeGallery() {
+      gOverlay.classList.remove('gallery-overlay--open');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('gallery-close').addEventListener('click', closeGallery);
+    gOverlay.addEventListener('click', e => { if (e.target === gOverlay) closeGallery(); });
+    document.getElementById('gallery-prev').addEventListener('click', () => {
+      gIdx = (gIdx - 1 + gImages.length) % gImages.length; switchImage();
+    });
+    document.getElementById('gallery-next').addEventListener('click', () => {
+      gIdx = (gIdx + 1) % gImages.length; switchImage();
+    });
+
+    document.addEventListener('keydown', e => {
+      if (!gOverlay.classList.contains('gallery-overlay--open')) return;
+      if (e.key === 'Escape') closeGallery();
+      if (e.key === 'ArrowLeft')  { gIdx = (gIdx - 1 + gImages.length) % gImages.length; switchImage(); }
+      if (e.key === 'ArrowRight') { gIdx = (gIdx + 1) % gImages.length; switchImage(); }
+    });
+
+    // Touch swipe support
+    let touchStartX = 0;
+    gOverlay.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    gOverlay.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) < 40) return;
+      if (dx < 0) { gIdx = (gIdx + 1) % gImages.length; }
+      else         { gIdx = (gIdx - 1 + gImages.length) % gImages.length; }
+      switchImage();
+    });
+
+    document.querySelectorAll('.prop-card__gallery-btn').forEach(btn => {
+      btn.addEventListener('click', e => { e.stopPropagation(); openGallery(btn.dataset.gallery); });
+    });
+  </script>
 
 </body>
+
 </html>
