@@ -281,7 +281,7 @@
   </div>
 
   <div class="footer__bottom">
-    <span>© 2026 BEING RESIDENCES. All rights reserved.</span>
+    <span>© <span id="footer-year"></span> BEING RESIDENCES. All rights reserved. Built by <a href="https://fueops.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">FueOps</a></span>
     <div>
       <a href="terms.html">Terms &amp; Conditions</a>
       <a href="privacy-policy.html">Privacy Policy</a>
@@ -290,6 +290,7 @@
 </footer>
 
 <script>
+document.getElementById('footer-year').textContent = new Date().getFullYear();
 const siteNav = document.getElementById('site-nav');
 window.addEventListener('scroll', () => {
   siteNav.classList.toggle('nav--scrolled', window.scrollY > 40);
