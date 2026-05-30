@@ -304,7 +304,7 @@ h1, h2, h3, h4, h5 { font-family: var(--display); font-weight: 300; letter-spaci
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  border-radius: 2px;
+  border-radius: 999px;
   transition: background .3s ease, color .3s ease, border-color .3s ease;
   cursor: pointer;
   white-space: nowrap;
@@ -375,21 +375,20 @@ h1, h2, h3, h4, h5 { font-family: var(--display); font-weight: 300; letter-spaci
 }
 
 .amenities-row {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  flex-wrap: wrap;
-  row-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: start;
+  align-items: start;
+  column-gap: 56px;
+  row-gap: 28px;
 }
 .amenity {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  padding: 0 22px;
   text-align: center;
 }
-.amenity:first-child { padding-left: 0; }
 .amenity__icon {
   width: 32px;
   height: 32px;
@@ -404,12 +403,7 @@ h1, h2, h3, h4, h5 { font-family: var(--display); font-weight: 300; letter-spaci
   color: var(--ink);
   white-space: nowrap;
 }
-.amenity__divider {
-  width: 1px;
-  height: 48px;
-  background: var(--rule);
-  flex-shrink: 0;
-}
+.amenity__divider { display: none; }
 
 .excellence__photo {
   position: relative;
@@ -940,9 +934,9 @@ h1, h2, h3, h4, h5 { font-family: var(--display); font-weight: 300; letter-spaci
   line-height: 1.7;
   margin-bottom: 6px;
 }
-.footer__col a { transition: color .2s ease; }
+.footer__col a { display: flex; align-items: center; gap: 6px; transition: color .2s ease; }
 .footer__col a:hover { color: var(--on-dark); }
-.footer__col a svg { vertical-align: -2px; margin-right: 4px; color: var(--sky); }
+.footer__col a svg { flex-shrink: 0; color: var(--sky); }
 
 .footer__bottom {
   max-width: 1280px;
@@ -993,9 +987,9 @@ h1, h2, h3, h4, h5 { font-family: var(--display); font-weight: 300; letter-spaci
 }
 .mobile-menu a {
   font-family: var(--display);
-  font-size: 36px;
+  font-size: 26px;
   font-weight: 300;
-  padding: 14px 0;
+  padding: 12px 0;
   border-bottom: 1px solid var(--rule-soft);
   color: var(--black);
   letter-spacing: -0.01em;
@@ -1064,8 +1058,6 @@ h1, h2, h3, h4, h5 { font-family: var(--display); font-weight: 300; letter-spaci
   .excellence__head { margin-bottom: 48px; }
   .excellence__grid { grid-template-columns: 1fr; gap: 40px; }
   .excellence__col--mid { grid-column: span 1; order: 0; }
-  .amenity { padding: 0 14px; }
-  .amenity__divider { height: 36px; }
 
   .properties { padding: 60px 28px 80px; }
   .properties__head { grid-template-columns: 1fr; gap: 24px; margin-bottom: 36px; }
@@ -1116,16 +1108,18 @@ h1, h2, h3, h4, h5 { font-family: var(--display); font-weight: 300; letter-spaci
 
   /* --- Excellence / About --- */
   .excellence { padding: 56px 22px 44px; }
+  .excellence__grid { gap: 28px; }
+  .excellence__col--mid { display: none; }   /* empty/0-height video cell on mobile — removes dead space */
   .excellence__title { font-size: 32px; }
-  .excellence__col--left h3 { font-size: 20px; line-height: 1.35; }
-  .excellence__col--right h4 { font-size: 17px; }
-  .excellence__partners { margin-top: 36px; }
-  .amenities-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px 8px; }
-  .amenity { padding: 0; }
+  .excellence__col--left h3 { font-size: 22px; line-height: 1.35; }
+  .excellence__col--right h4 { font-size: 21px; }
+  .excellence__partners { margin-top: 32px; }
+  .amenities-row { display: flex; flex-wrap: nowrap; gap: 8px; justify-content: space-between; }
+  .amenity { padding: 0; flex: 1; min-width: 0; gap: 9px; }
   .amenity:first-child { padding-left: 0; }
   .amenity__divider { display: none; }
-  .amenity__icon { width: 26px; height: 26px; }
-  .amenity span { font-size: 10.5px; white-space: normal; text-align: center; }
+  .amenity__icon { width: 28px; height: 28px; }
+  .amenity span { font-size: 10px; line-height: 1.3; white-space: normal; text-align: center; }
 
   /* --- Properties --- */
   .properties { padding: 50px 22px 64px; }
@@ -1167,8 +1161,10 @@ h1, h2, h3, h4, h5 { font-family: var(--display); font-weight: 300; letter-spaci
   .footer { padding: 40px 22px 22px; }
   .footer__top { flex-direction: column; gap: 20px; align-items: flex-start; padding-bottom: 24px; margin-bottom: 32px; }
   .footer__nav { position: static; transform: none; flex-wrap: wrap; gap: 12px 18px; }
-  .footer__brand img { height: 44px; }
+  .footer__brand { align-self: center; }
+  .footer__brand img { height: 64px; }
   .footer__grid { grid-template-columns: 1fr 1fr; gap: 24px; padding-bottom: 28px; }
+  .footer__col:first-child { grid-column: 1 / -1; }   /* Contact spans full width so the email fits on one row */
   .footer__bottom { flex-direction: column; gap: 10px; align-items: flex-start; }
   .footer__bottom > div { flex-wrap: wrap; gap: 14px; }
 }
